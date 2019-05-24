@@ -1,19 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
-import Navbar from '../components/Navbar'
-
-const Container = styled.div`
-    width: 100%;
-`
-
-const Main = styled.div`
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-`
+import Layout from '../components/Layout'
 
 const Template = ( { data, pageContext } ) => {
     console.log(pageContext)
@@ -23,34 +11,31 @@ const Template = ( { data, pageContext } ) => {
     const html = markdownRemark.html
 
     return (
-        <Container>
-            <Navbar />
-            <Main>
-                <h2>{ title }</h2>
-                <div 
-                    className = 'blogpost'
-                    style={{ opacity: .8 }}
-                    dangerouslySetInnerHTML={ { __html: html } }
-                />
-                <div 
-                    style={{
-                        display: 'flex',
-                        alignItems: 'spaceBetween',
-                    }}
-                >
-                { prev && 
-                    <Link to={ prev.frontmatter.path }>
-                        Prev 
-                    </Link>
-                }
-                { next && 
-                    <Link to={ next.frontmatter.path }>
-                        Next
-                    </Link>
-                }
-                </div>
-            </Main>
-        </Container>
+        <Layout>
+            <h2>{ title }</h2>
+            <div 
+                className = 'blogpost'
+                style={{ opacity: .8 }}
+                dangerouslySetInnerHTML={ { __html: html } }
+            />
+            <div 
+                style={{
+                    display: 'flex',
+                    alignItems: 'spaceBetween',
+                }}
+            >
+            { prev && 
+                <Link to={ prev.frontmatter.path }>
+                    Prev 
+                </Link>
+            }
+            { next && 
+                <Link to={ next.frontmatter.path }>
+                    Next
+                </Link>
+            }
+            </div>
+        </Layout>
     )
 }
 

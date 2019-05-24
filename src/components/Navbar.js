@@ -4,14 +4,13 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     width: 100%;
-    padding: 0 1rem;
     background: linear-gradient( to bottom, #e4e4e3, #FAF7F3);
 `
 
 const Inner = styled.div`
     max-width: 1200px;
     margin: auto;
-    padding: 1rem 0;
+    padding: 1rem;
     display: flex;
     align-items: center;
 `

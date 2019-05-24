@@ -1,6 +1,6 @@
 ---
 path: "/testing-my-gatsby-site"
-date: "2019-05-23"
+date: "2019-05-24"
 title: "Testing My New Gatsby Site"
 tags: ['testing', 'gatsby']
 excerpt: "Lorem markdownum Phrygia captantia neque per ira mox *curarum si teli* lacertos.

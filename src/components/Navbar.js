@@ -9,7 +9,7 @@ const Container = styled.div`
 
 const Inner = styled.div`
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -18,6 +18,7 @@ const Inner = styled.div`
 const SiteTitle = styled.h1`
     margin-top: 0;
     margin-right: 10px;
+    margin-bottom: 0;
     text-decoration: none;
     font-weight: 900;
     font-size: 3rem;
@@ -28,6 +29,7 @@ const SiteTitle = styled.h1`
 
 const SiteDescription = styled.p`
     margin-top: -.5rem;
+    margin-bottom: 0;
     font-weight: 500;
     font-size: 2rem;
     color: #000;

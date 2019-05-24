@@ -1,8 +1,11 @@
 import React from "react"
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Title from '../components/Title'
+import DateText from '../components/DateText'
+import TagList from '../components/TagList'
+import More from '../components/More'
 
 const Article = styled.div`
     width: 65%;
@@ -16,6 +19,9 @@ const Section = styled.div`
     margin-bottom: 2rem;
 `
 
+const Excerpt = styled.p`
+    margin-bottom: .5rem;
+`
 const Index = ( { data } ) => {
     const { edges } = data.allMarkdownRemark
     return (
@@ -23,25 +29,27 @@ const Index = ( { data } ) => {
             <Article>
                 { edges.map(( edge, index ) => {
                     const { frontmatter } = edge.node
-                    console.log( frontmatter )
                     return (
                         <Section key={ `${ index }-${ frontmatter.title }` }>
+                            <DateText date={ frontmatter.date } />
                             <Title 
                                 title={ frontmatter.title }
                                 to={ frontmatter.path }
                             />
-                            <div>
-                                <p>
-                                    { frontmatter.excerpt }
-                                </p>
-                            </div>
+                            <Excerpt>
+                                { frontmatter.excerpt }
+                            </Excerpt>
+                            <TagList
+                                tags={ frontmatter.tags }
+                            />
                         </Section>
                     )
 
                 })}
-                <Link to='/tags/'>
-                    View all tags
-                </Link>
+                <More 
+                    to='/tags/'
+                    text='All Tags'
+                />
             </Article>
         </Layout>
     )
@@ -64,6 +72,7 @@ export const query = graphql`
                         path
                         date
                         excerpt
+                        tags
                     } 
                 }
             }

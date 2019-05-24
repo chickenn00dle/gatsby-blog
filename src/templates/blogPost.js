@@ -27,7 +27,6 @@ const StyledLink = styled(props => <Link {...props} />)`
 `
 
 const Template = ( { data, pageContext } ) => {
-    console.log(pageContext)
     const { next, prev } = pageContext
     const { markdownRemark } = data
     const title = markdownRemark.frontmatter.title
@@ -45,12 +44,12 @@ const Template = ( { data, pageContext } ) => {
                 <PostNavigation>
                     { prev && 
                         <StyledLink to={ prev.frontmatter.path }>
-                            <FaArrowLeft /> { prev.frontmatter.title }
+                            <FaArrowLeft /> 
                         </StyledLink>
                     }
                     { next && 
                         <StyledLink to={ next.frontmatter.path }>
-                            { next.frontmatter.title } <FaArrowRight />
+                            <FaArrowRight />
                         </StyledLink>
                     }
                 </PostNavigation>

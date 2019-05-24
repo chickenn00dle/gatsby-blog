@@ -1,6 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Title from '../components/Title'
+import More from '../components/More'
+import { FaTags } from 'react-icons/fa'
+
+const Section = styled.div`
+    display: flex;
+    align-items: center;
+`
 
 const SingleTagIndexTemplate = ({ data, pageContext }) => {
     const { posts, tagName } = pageContext
@@ -10,14 +18,19 @@ const SingleTagIndexTemplate = ({ data, pageContext }) => {
             <div>
                 { posts.map(( post, index ) => {
                     return (
-                        <div key={ index }>
+                        <Section key={ index }>
+                            <FaTags />&nbsp;
                             <Title 
                                 title={ post.frontmatter.title }
                                 to={ post.frontmatter.path }
                             />
-                        </div>
+                        </Section>
                     )
                 })}
+                <More
+                    to='/tags'
+                    text='All Tags'
+                />
             </div>
         </Layout>
     )

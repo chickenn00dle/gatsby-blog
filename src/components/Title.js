@@ -3,8 +3,10 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const StyledTitle = styled.h2`
+    margin-bottom: .5rem;
     font-weight: 700;
     color: #F1B783;
+    opacity: 1;
 `
 
 const Title = ({ title, to }) => {

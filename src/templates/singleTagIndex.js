@@ -1,25 +1,23 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import styled from 'styled-components'
 import Layout from '../components/Layout'
+import Title from '../components/Title'
 
 const SingleTagIndexTemplate = ({ data, pageContext }) => {
     const { posts, tagName } = pageContext
     return (
         <Layout>
-            <h3>Posts About { tagName }</h3>
+            <h3>{ tagName.charAt(0).toUpperCase() + tagName.slice(1) } Posts</h3>
             <div>
-                <ul>
-                    { posts.map(( post, index ) => {
-                        return (
-                            <li key={ index }>
-                                <Link to={ post.frontmatter.path }>
-                                    { post.frontmatter.title }
-                                </Link>
-                            </li>
-                        )
-                    })}
-                </ul>
+                { posts.map(( post, index ) => {
+                    return (
+                        <div key={ index }>
+                            <Title 
+                                title={ post.frontmatter.title }
+                                to={ post.frontmatter.path }
+                            />
+                        </div>
+                    )
+                })}
             </div>
         </Layout>
     )

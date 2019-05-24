@@ -6,8 +6,8 @@
 
 module.exports = {
     siteMetadata: {
-        title: 'RZMY',
-        description: 'A blog by Rasmy Nguyen',
+        title: 'BLOG.RZMY',
+        description: 'by Rasmy Nguyen',
     },
     plugins: [
         `gatsby-plugin-styled-components`,

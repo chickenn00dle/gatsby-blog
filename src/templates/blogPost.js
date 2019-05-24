@@ -1,6 +1,19 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import styled from 'styled-components'
 import Navbar from '../components/Navbar'
+
+const Container = styled.div`
+    width: 100%;
+`
+
+const Main = styled.div`
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+`
 
 const Template = ( { data, pageContext } ) => {
     console.log(pageContext)
@@ -10,14 +23,9 @@ const Template = ( { data, pageContext } ) => {
     const html = markdownRemark.html
 
     return (
-        <div>
-            <Navbar title='RZMY' />
-            <div 
-                style={{ 
-                    padding: '1rem', 
-                    fontFamily: 'lato',
-                }}
-            >
+        <Container>
+            <Navbar />
+            <Main>
                 <h2>{ title }</h2>
                 <div 
                     className = 'blogpost'
@@ -41,8 +49,8 @@ const Template = ( { data, pageContext } ) => {
                     </Link>
                 }
                 </div>
-            </div>
-        </div>
+            </Main>
+        </Container>
     )
 }
 

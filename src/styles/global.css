@@ -1,0 +1,16 @@
+body {
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,400i,900&display=swap');
+    margin: 0;
+    padding: 0;
+    background-color: #FAF7F3;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, dl, dt, dd, blockquote {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem; 
+    margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+}

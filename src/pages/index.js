@@ -2,36 +2,62 @@ import React from "react"
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import Navbar from '../components/Navbar'
+import Title from '../components/Title'
 
 const Container = styled.div`
-    margin: 0;
-    padding: 0;
-    background-color: #FAF7F3;
+    width: 100%;
+`
+
+const Main = styled.div`
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+`
+
+const Article = styled.div`
+    width: 65%;
+    
+    @media ( max-width: 700px ) {
+        width: 100%;
+    }
+`
+
+const Section = styled.div`
+    margin-bottom: 2rem;
 `
 
 const Layout = ( { data } ) => {
     const { edges } = data.allMarkdownRemark
     return (
         <Container>
-            <div>
-                <Navbar />
-                <div>
-                    { edges.map( edge => {
+            <Navbar />
+            <Main>
+                <Article>
+                    { edges.map(( edge, index ) => {
                         const { frontmatter } = edge.node
+                        console.log( frontmatter )
                         return (
-                            <div key = { frontmatter.title }>
-                                <Link to = { frontmatter.path } >
-                                    <h2>{ frontmatter.title }</h2>
-                                </Link>
-                            </div>
+                            <Section key={ `${ index }-${ frontmatter.title }` }>
+                                <Title 
+                                    title={ frontmatter.title }
+                                    to={ frontmatter.path }
+                                />
+                                <div>
+                                    <p>
+                                        { frontmatter.excerpt }
+                                    </p>
+                                </div>
+                            </Section>
                         )
 
                     })}
                     <Link to='/tags/'>
                         View all tags
                     </Link>
-                </div>
-            </div>
+                </Article>
+            </Main>
         </Container>
     )
 }

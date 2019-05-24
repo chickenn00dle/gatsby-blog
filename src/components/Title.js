@@ -11,7 +11,10 @@ const StyledTitle = styled.h2`
 
 const Title = ({ title, to }) => {
     return (
-        <Link to={ to }>
+        <Link 
+            to={ to }
+            style={{ textDecorationColor: '#000' }} 
+        >
             <StyledTitle>
                 { title }
             </StyledTitle>

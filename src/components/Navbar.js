@@ -22,7 +22,7 @@ const SiteTitle = styled.h1`
     font-weight: 900;
     font-size: 3rem;
     color: #000;
-    opacity: .9;
+    opacity: 1;
     cursor: pointer;
 `
 

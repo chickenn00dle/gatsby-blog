@@ -51,7 +51,7 @@ exports.createPages = ( ( { graphql, actions } ) => {
                     query {
                         allMarkdownRemark(
                             sort: { 
-                                order: ASC, 
+                                order: DESC, 
                                 fields: [ frontmatter___date ] 
                             }
                         ){

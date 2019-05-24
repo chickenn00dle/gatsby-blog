@@ -15,3 +15,33 @@ h1, h2, h3, h4, h5, h6 {
     opacity: .8;
 }
 
+p, ul, ol, li, dl, dt, dd {
+    font-weight: 300;
+    opacity: .7;
+}
+
+a {
+    font-weight: 300;
+    color: #db7519;
+}
+
+a:visited {
+    color: #db7519;
+}
+
+blockquote {
+    position: relative;
+    margin-left: 0;
+    font-style: italic;
+}
+
+blockquote:before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: .25rem;
+    z-index: 2;
+    width: 5px;
+    height: 90%;
+    background: #F1B783;
+}

@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
+import DateText from '../components/DateText'
+import TagList from '../components/TagList'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
 
 const Article = styled.div`
@@ -13,6 +15,10 @@ const Article = styled.div`
 `
 const Section = styled.div`
     margin-bottom: 2rem;
+`
+
+const PostTitle = styled.h2`
+    margin-bottom: .5rem;
 `
 
 const PostNavigation = styled.div`
@@ -29,14 +35,16 @@ const StyledLink = styled(props => <Link {...props} />)`
 const Template = ( { data, pageContext } ) => {
     const { next, prev } = pageContext
     const { markdownRemark } = data
-    const title = markdownRemark.frontmatter.title
     const html = markdownRemark.html
+    const frontmatter = markdownRemark.frontmatter
 
     return (
         <Layout>
             <Article>
                 <Section>
-                    <h2>{ title }</h2>
+                    <DateText date={ frontmatter.date } /> 
+                    <PostTitle>{ frontmatter.title }</PostTitle>
+                    <TagList tags={ frontmatter.tags } />
                     <div 
                         dangerouslySetInnerHTML={ { __html: html } }
                     />
@@ -64,6 +72,8 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                date
+                tags
             }
         }
     }

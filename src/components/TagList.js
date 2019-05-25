@@ -7,7 +7,7 @@ const TagContainer = styled.div`
 `
 
 const Tag = styled.p`
-    margin-right: 1rem;
+    margin-right: .5rem;
     color: #fff;
     font-size: .9rem;
     font-weight: 500;

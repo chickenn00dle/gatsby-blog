@@ -19,7 +19,6 @@ const SingleTagIndexTemplate = ({ data, pageContext }) => {
                 { posts.map(( post, index ) => {
                     return (
                         <Section key={ index }>
-                            <FaTags />&nbsp;
                             <Title 
                                 title={ post.frontmatter.title }
                                 to={ post.frontmatter.path }

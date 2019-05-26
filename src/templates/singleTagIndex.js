@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Title from '../components/Title'
 import More from '../components/More'
-import { FaTags } from 'react-icons/fa'
 
 const Section = styled.div`
     display: flex;

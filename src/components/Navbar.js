@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, Link } from 'gatsby'
+import Social from './Social'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -15,10 +16,13 @@ const Inner = styled.div`
     align-items: center;
 `
 
+const StyledLink = styled( props => <Link { ...props } /> )`
+    text-decoration: none;
+`
+
 const SiteTitle = styled.h1`
-    margin-top: 0;
     margin-right: 10px;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     text-decoration: none;
     font-weight: 900;
     font-size: 3rem;
@@ -27,18 +31,14 @@ const SiteTitle = styled.h1`
     cursor: pointer;
 `
 
-const SiteDescription = styled.p`
-    margin-top: -.5rem;
-    margin-bottom: 0;
-    font-weight: 500;
-    font-size: 2rem;
-    color: #000;
-    opacity: .35;
+const SocialContainer = styled.div`
+    margin-bottom: -1rem;
 
     @media ( max-width: 700px ) {
         display: none;
     }
 `
+
 
 const SiteMeta = ( { data } ) => {
     const title = data.site.siteMetadata.title
@@ -47,13 +47,12 @@ const SiteMeta = ( { data } ) => {
     return (
         <Container>
             <Inner>
-            <Link 
-                to='/'
-                style={{ textDecoration: 'none' }}
-            >
+            <StyledLink to='/'>
                 <SiteTitle>{ title }</SiteTitle>
-            </Link>
-            <SiteDescription>{ description }</SiteDescription>
+            </StyledLink>
+            <SocialContainer>
+                <Social />
+            </SocialContainer>
             </Inner>
         </Container>
     )
@@ -68,7 +67,6 @@ const Navbar = () => {
                       site {
                         siteMetadata {
                           title
-                          description
                         }
                       }
                     }

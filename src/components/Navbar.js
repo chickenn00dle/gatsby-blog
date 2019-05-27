@@ -44,7 +44,6 @@ const SocialContainer = styled.div`
 
 const SiteMeta = ( { data } ) => {
     const title = data.site.siteMetadata.title
-    const description = data.site.siteMetadata.description
 
     return (
         <Container>

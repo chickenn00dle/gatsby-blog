@@ -13,7 +13,7 @@ const StyledLink = styled.a`
     color: #000 !important; 
     margin-right: 1rem;
     font-weight: 900;
-    font-size: ${ props => props.size == 'large' ? '2rem' : '1.75rem' };
+    font-size: ${ props => props.size === 'large' ? '2rem' : '1.75rem' };
 
     &:last-child {
         margin-right: 0;

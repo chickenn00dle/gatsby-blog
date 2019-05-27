@@ -11,7 +11,7 @@ const Tag = styled.p`
     color: #fff;
     font-size: .9rem;
     font-weight: 500;
-    background: #F1B783;
+    background: #eb9d57;
     padding: 3px;
     border-radius: 5px;
 `

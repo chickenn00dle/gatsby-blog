@@ -19,11 +19,18 @@ const Main = styled.div`
 
 const Footer = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     @media ( min-width: 700px ) {
         display: none;
     }
+`
+
+const FooterText = styled.p`
+    color: #000;
+    opacity: .1;
 `
 
 const Layout = ({ children }) => {
@@ -34,7 +41,10 @@ const Layout = ({ children }) => {
                 { children }
             </Main>
             <Footer>
-                <Social />
+                <Social size='large' />
+                <FooterText>
+                    by Rasmy Nguyen
+                </FooterText>
             </Footer>
         </Container>
     )

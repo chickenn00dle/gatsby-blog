@@ -9,6 +9,11 @@ const Section = styled.div`
     align-items: center;
 `
 
+const TagIcon = styled.div`
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+`
+
 const AllTagsIndexTemplate = ({ data, pageContext }) => {
     const { tags } = pageContext
     return (
@@ -18,7 +23,9 @@ const AllTagsIndexTemplate = ({ data, pageContext }) => {
                 { tags.map(( tag, index ) => {
                     return (
                         <Section key={ index }>
-                            <FaTags />&nbsp;  
+                            <TagIcon>
+                                <FaTags />  
+                            </TagIcon>
                             <Title 
                                 title={ tag }
                                 to={ `tags/${ tag }` }

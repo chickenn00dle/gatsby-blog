@@ -4,44 +4,50 @@ import { StaticQuery } from 'gatsby'
 import { FaTwitter, FaCodepen, FaGithub, FaEnvelope } from 'react-icons/fa'
 
 const SocialBar = styled.p`
-    margin-top: -.5rem;
-    margin-bottom: .5rem;
-    align-self: flex-end;
-    font-weight: 900;
-    font-size: 1.75rem;
     color: #000;
-    opacity: .1;
+    opacity: .15;
+    margin-bottom: 0;
 `
 
 const StyledLink = styled.a`
     color: #000 !important; 
     margin-right: 1rem;
+    font-weight: 900;
+    font-size: ${ props => props.size == 'large' ? '2rem' : '1.75rem' };
+
+    &:last-child {
+        margin-right: 0;
+    }
 `
 
-const SocialIcons = ({ data }) => {
+const SocialIcons = ({ data, size }) => {
     const { codepen, email, github, twitter } = data.site.siteMetadata
     return (
         <SocialBar>
             <StyledLink 
                 href={ github } 
                 target='blank'
+                size={ size }
             >
                 <FaGithub />
             </StyledLink>
             <StyledLink 
                 href={ codepen } 
                 target='blank'
+                size={ size }
             >
                 <FaCodepen />
             </StyledLink>
             <StyledLink 
                 href={ twitter } 
                 target='blank'
+                size={ size }
             >
                 <FaTwitter />
             </StyledLink>
             <StyledLink 
                 href={ `mailto:${ email }?subject=Mail from blog.rzmy` }
+                size={ size }
             >
                 <FaEnvelope />
             </StyledLink>
@@ -49,7 +55,7 @@ const SocialIcons = ({ data }) => {
     )
 }
 
-const Social = () => {
+const Social = ({ size = 'small' }) => {
     return (
         <StaticQuery
             query={
@@ -66,7 +72,15 @@ const Social = () => {
                     }
                 `
             }
-            render = { data => <SocialIcons data={ data } /> }
+            render = { data => {
+                return (
+                    <SocialIcons 
+                        size={ size }
+                        data={ data } 
+                    /> 
+                )}
+            }
+
         />
     )
 }

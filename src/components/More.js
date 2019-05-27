@@ -9,14 +9,12 @@ const MoreContainer = styled.div`
 `
 
 const StyledIcon = styled( props => <Link { ...props } /> )`
-    color: #F1B783;
+    color: #eb9d57;
     text-decoration: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
 `
 
 const StyledLink = styled( props => <Link { ...props } /> )`
-    color: #F1B783;
+    color: #eb9d57;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;

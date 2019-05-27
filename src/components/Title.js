@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const StyledTitle = styled.h2`
     margin-bottom: .5rem;
     font-weight: 700;
-    color: #eb9d57;
+    color: #ff8f2f;
     opacity: 1;
 `
 

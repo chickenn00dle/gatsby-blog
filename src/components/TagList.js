@@ -11,9 +11,10 @@ const Tag = styled.p`
     color: #fff;
     font-size: .9rem;
     font-weight: 500;
-    background: #eb9d57;
-    padding: 3px;
+    background: #ff8f2f;
+    padding: .25rem .5rem;
     border-radius: 5px;
+    opacity: 1;
 `
 
 const StyledLink = styled( props => <Link { ...props } /> )`

@@ -17,8 +17,11 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, dl, dt, dd, blockquote {
 }
 
 img, figure, figcaption {
-    margin-bottom: 1rem;
     margin-top: 0;
+}
+
+img {
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

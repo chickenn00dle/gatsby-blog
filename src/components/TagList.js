@@ -26,8 +26,11 @@ const TagList = ({ tags }) => {
         <TagContainer>
             { tags.map(( tag, index ) => {
                 return (
-                    <StyledLink to={ `/tags/${ tag }` }>
-                        <Tag key={ index }>
+                    <StyledLink 
+                        key={ index }
+                        to={ `/tags/${ tag }` }
+                    >
+                        <Tag>
                             { tag }
                         </Tag>
                     </StyledLink>

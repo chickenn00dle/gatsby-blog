@@ -38,7 +38,6 @@ const Template = ( { data, pageContext } ) => {
     const html = markdownRemark.html
     const frontmatter = markdownRemark.frontmatter
 
-    console.log(pageContext)
     return (
         <Layout>
             <Article>

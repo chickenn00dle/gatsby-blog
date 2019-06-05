@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, Link } from 'gatsby'
+import Logo from './Logo'
 import Social from './Social'
 import styled from 'styled-components'
 
@@ -22,17 +23,6 @@ const StyledLink = styled( props => <Link { ...props } /> )`
     margin-bottom: 0;
 `
 
-const SiteTitle = styled.h1`
-    margin-right: 1rem;
-    margin-bottom: 0;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 3rem;
-    color: #000;
-    opacity: 1;
-    cursor: pointer;
-`
-
 const SocialContainer = styled.div`
     margin-bottom: -1rem;
 
@@ -41,7 +31,6 @@ const SocialContainer = styled.div`
     }
 `
 
-
 const SiteMeta = ( { data } ) => {
     const title = data.site.siteMetadata.title
 
@@ -49,7 +38,7 @@ const SiteMeta = ( { data } ) => {
         <Container>
             <Inner>
             <StyledLink to='/'>
-                <SiteTitle>{ title }</SiteTitle>
+                <Logo title={ title } />
             </StyledLink>
             <SocialContainer>
                 <Social />

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <rect id="RZMY-Logo" serif:id="RZMY Logo" x="0" y="0" width="400" height="400" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="RZMY-Logo1" serif:id="RZMY Logo" x="0" y="0" width="400" height="400"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g id="Y" transform="matrix(-1.51094,-0.549938,0.815459,-2.24046,563.168,798.194)">
+            <path d="M257.5,150.141L310,244.555L240,244.555L257.5,150.141Z"/>
+        </g>
+        <g id="M" transform="matrix(1.87307,0,0,2.11038,-253.301,-210.04)">
+            <g id="M1" serif:id="M" transform="matrix(0.551512,0,0.0013624,0.801875,237.936,51.9682)">
+                <path d="M52.497,127.612L102.906,227.378L2.088,227.378L52.497,127.612Z"/>
+            </g>
+            <g id="M2" serif:id="M" transform="matrix(0.551512,0,0.0013624,0.801875,203.539,51.9682)">
+                <path d="M52.497,127.612L102.906,227.378L2.088,227.378L52.497,127.612Z"/>
+            </g>
+        </g>
+        <g id="Z" transform="matrix(0.371855,2.22015,-1.38759,0.232409,239.214,-134.062)">
+            <path d="M90,60L190,140L90,140L90,60Z"/>
+        </g>
+        <g transform="matrix(-0.00248105,2.22965,-1.12567,-0.00318303,256.207,83.6739)">
+            <g id="R">
+                <path id="R1" serif:id="R" d="M52.497,127.612L102.906,227.378L2.088,227.378L52.497,127.612Z"/>
+            </g>
+        </g>
+    </g>
+</svg>

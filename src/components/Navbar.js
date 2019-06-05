@@ -21,6 +21,17 @@ const Inner = styled.div`
 const StyledLink = styled( props => <Link { ...props } /> )`
     text-decoration: none;
     margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: ""; 
+        position: absolute; 
+        top: 0; 
+        right: 0; 
+        bottom: 0; 
+        left: 0;
+    }
 `
 
 const SocialContainer = styled.div`

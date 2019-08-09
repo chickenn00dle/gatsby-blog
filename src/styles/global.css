@@ -48,6 +48,16 @@ code {
     background: #E8E8E8;
     border-radius: 5px;
     padding: .1rem .5rem;
+	line-height: 1.5rem;
+}
+
+pre { 
+	display: block;
+	width: 100%;
+	background: #E8E8E8;
+    border-radius: 5px;
+	padding: 1rem .5rem;
+	overflow: scroll;
 }
 
 blockquote {

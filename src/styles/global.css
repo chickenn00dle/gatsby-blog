@@ -51,18 +51,24 @@ a:visited {
 
 code {
     color: #000;
+	opacity: .95;
     background: #E8E8E8;
     border-radius: 5px;
-    padding: .1rem .5rem;
+    padding: .1rem .5rem .25rem;
 	line-height: 1.5rem;
 }
 
 pre { 
 	display: block;
-	background: #E8E8E8;
+	background: #2b303b;
     border-radius: 5px;
 	padding: 1rem .5rem;
 	overflow: scroll;
+}
+
+pre code {
+	color: #fff;
+	background: none !important;
 }
 
 blockquote {

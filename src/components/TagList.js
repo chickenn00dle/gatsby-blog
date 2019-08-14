@@ -19,6 +19,9 @@ const Tag = styled.p`
 
 const StyledLink = styled( props => <Link { ...props } /> )`
     text-decoration: none;
+	&:hover {
+		background: none !important;
+	}
 `
 
 const TagList = ({ tags }) => {

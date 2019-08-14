@@ -13,7 +13,7 @@ const Title = ({ title, to }) => {
     return (
         <Link 
             to={ to }
-            style={{ textDecorationColor: '#000' }} 
+            style={{ textDecorationColor: '#000', background: 'none' }} 
         >
             <StyledTitle>
                 { title }

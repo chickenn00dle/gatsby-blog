@@ -32,6 +32,10 @@ const StyledLink = styled( props => <Link { ...props } /> )`
         bottom: 0; 
         left: 0;
     }
+
+	&:hover {
+		background: none !important;
+	}
 `
 
 const SocialContainer = styled.div`

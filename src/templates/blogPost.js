@@ -30,6 +30,10 @@ const PostNavigation = styled.div`
 const StyledLink = styled(props => <Link {...props} />)`
     text-decoration: none;
     font-weight: 500;
+
+	&:hover {
+		background: none;
+		color: #ff8f2f !important;
 `
 
 const Template = ( { data, pageContext } ) => {

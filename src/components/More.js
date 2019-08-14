@@ -9,16 +9,26 @@ const MoreContainer = styled.div`
 `
 
 const StyledIcon = styled( props => <Link { ...props } /> )`
-    color: #FFAA62;
+    color: #FFAA62 !important;
     text-decoration: none;
+
+	&:hover {
+		background: none;
+		color: #ffaa62 !important;
+	}
 `
 
 const StyledLink = styled( props => <Link { ...props } /> )`
-    color: #FFAA62;
+    color: #FFAA62 !important;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     margin-bottom: 1.25rem;
+
+	&:hover {
+		background: none !important;
+		color: #ffaa62 !important;
+	}
 `
 
 const More = ({ to, text }) => {

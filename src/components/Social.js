@@ -18,6 +18,11 @@ const StyledLink = styled.a`
     &:last-child {
         margin-right: 0;
     }
+
+	&:hover {
+		background: none !important;
+		color: #000 !important;
+	}
 `
 
 const SocialIcons = ({ data, size }) => {

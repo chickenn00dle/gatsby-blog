@@ -1,6 +1,6 @@
-# Gatsby For BLOG.RZMY.WIN
+# Gatsby Blog
 
-This is the Gatsby project I set up for blog.rzmy.win. It's meant to be a minimal and lightweight blog to replace social media. If you'd like to get started with your own, feel free to use this project as a starting point!
+This is a template Gatsby blog. It's meant to be minimal and lightweight. Feel free to use this project as a starting point!
 
 ## Getting Started
 
@@ -27,13 +27,13 @@ Then run yarn to install dependencies:
 yarn
 ```
 
-Finally, start development server:
+Finally, start the development server:
 
 ```
 gatsby develop
 ```
 
-That's it, you're ready to start building
+That's it, you're ready to start blogging
 
 ## Built With
 

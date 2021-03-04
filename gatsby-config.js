@@ -6,9 +6,9 @@
 
 module.exports = {
     siteMetadata: {
-        title: 'BLOG.RZMY',
-        description: 'A blog about things that I learn, see, or do. Mostly dedicated to web junk.',
-        email: 'rtnguyen87@gmail.com',
+        title: 'Gatsby Blog',
+        description: 'A blog built with Gatsby.',
+        email: 'test@example.com',
         twitter: 'https://twitter.com/ChickenN00dle', 
         github: 'https://github.com/chickenn00dle',
         codepen: 'https://codepen.io/chickenn00dle',

@@ -21,10 +21,10 @@ git clone https://github.com/chickenn00dle/gatbsy-blog.git [project name]
 cd [project name]
 ```
 
-Then run yarn to install dependencies:
+Then install dependencies:
 
 ```
-yarn
+npm install
 ```
 
 Finally, start the development server:
